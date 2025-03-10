@@ -23,6 +23,8 @@ body {
   color: #5a3e2b;
   font-family: "Quicksand";
   font-weight: 500;
+  display: grid;
+  place-items: center;
 }
 
 .app {
@@ -101,7 +103,7 @@ input {
 .list ul {
   list-style: none;
   width: 80%;
-  overflow: scroll;
+  /* overflow: scroll; */
 
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));

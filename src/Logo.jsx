@@ -3,7 +3,7 @@ import App from "./App";
 function Logo() {
   return (
     <div>
-      <h1>✌️Far Away</h1>
+      <h1>🥛 Nom Udom Storage 🥛</h1>
     </div>
   );
 }
