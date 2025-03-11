@@ -1,13 +1,13 @@
 import PackingList from "./PackingList";
 import App from "./App";
 
-function Items({ item }) {
+function Items({ item, onDeleteItems }) {
   return (
     <li>
       <span style={item.packed ? { textDecoration: "line-through" } : {}}>
         {item.quantity} - {item.description}
       </span>
-      <button>❌</button>
+      <button onClick={()=>onDeleteItems(item.id)}>❌</button>
     </li>
   );
 }
