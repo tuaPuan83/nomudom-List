@@ -19,15 +19,27 @@ function App() {
   }
 
   function handleDeleteItems(id) {
-    setItems((items) => items.filter((i) => i.id!== id));
-    // i.id !== id means remove item from collection 
+    setItems((items) => items.filter((i) => i.id !== id));
+    // i.id !== id means remove item from collection
+  }
+
+  function handleToggleItems(id) {
+    setItems((items) =>
+      items.map((item) =>
+        item.id === id ? { ...item, packed: !item.packed } : item
+      )
+    );
   }
 
   return (
     <div className="app">
       <Logo />
-      <Form onAddItems={handleAddItems}  />
-      <PackingList items={items} onDeleteItems={handleDeleteItems} />
+      <Form onAddItems={handleAddItems} />
+      <PackingList
+        items={items}
+        onDeleteItems={handleDeleteItems}
+        onToggleItem={handleToggleItems}
+      />
       <Stats />
     </div>
   );
