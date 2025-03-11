@@ -1,11 +1,11 @@
 import App from "./App";
 import Items from "./Items";
 
-function PackingList({ initialItems }) {
+function PackingList({ items }) {
   return (
     <div className="list">
       <ul>
-        {initialItems.map((item) => (
+        {items.map((item) => (
           <Items item={item} key={item.id} />
         ))}
       </ul>
